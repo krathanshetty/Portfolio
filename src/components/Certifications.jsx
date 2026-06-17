@@ -8,7 +8,7 @@ const certifications = [
     issuer: "Simplilearn",
     date: "May 2026",
     detail: "",
-    image: "/certs/postgresql.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171869/prompt_xhumn0.png",
   },
 
   {
@@ -17,7 +17,7 @@ const certifications = [
     issuer: "MongoDB",
     date: "Feb 2026",
     detail: "",
-    image: "/certs/mongodbpython.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171869/mongodbpython_ejjzj7.png",
   },
 
   {
@@ -26,7 +26,7 @@ const certifications = [
     issuer: "MongoDB",
     date: "Feb 2026",
     detail: "",
-    image: "/certs/mongodbdocument.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171868/mongodbdocument_a69vnf.png",
   },
 
   {
@@ -35,7 +35,7 @@ const certifications = [
     issuer: "Forage",
     date: "Aug 2025",
     detail: "",
-    image: "/certs/forage2.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171867/forage2_yzhuyo.png",
   },
 
   {
@@ -44,7 +44,7 @@ const certifications = [
     issuer: "Fortinet (Valid till 2027)",
     date: "Jul 2025",
     detail: "",
-    image: "/certs/fortinet4.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171868/fortinet4_cullc2.png",
   },
 
   {
@@ -53,7 +53,7 @@ const certifications = [
     issuer: "Fortinet",
     date: "Jul 2025",
     detail: "",
-    image: "/certs/fortinet.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171868/fortinet_xkryph.png",
   },
 
   {
@@ -62,7 +62,7 @@ const certifications = [
     issuer: "Fortinet",
     date: "Jul 2025",
     detail: "",
-    image: "/certs/fortinet2.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171868/fortinet2_djzup3.png",
   },
 
   {
@@ -71,7 +71,7 @@ const certifications = [
     issuer: "Fortinet",
     date: "Jul 2025",
     detail: "",
-    image: "/certs/fortinet3.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171868/fortinet3_wdmsdb.png",
   },
 
   {
@@ -80,7 +80,7 @@ const certifications = [
     issuer: "Forage",
     date: "Jul 2025",
     detail: "",
-    image: "/certs/forage.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171867/forage_rkjt5w.png",
   },
 
   {
@@ -89,7 +89,7 @@ const certifications = [
     issuer: "Cisco Networking Academy",
     date: "Mar 2025",
     detail: "",
-    image: "/certs/cisco2.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171867/cisco2_kxxchi.png",
   },
 
   {
@@ -98,7 +98,7 @@ const certifications = [
     issuer: "Simplilearn",
     date: "Mar 2025",
     detail: "",
-    image: "/certs/prompt.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171869/prompt_xhumn0.png",
   },
 
   {
@@ -107,7 +107,7 @@ const certifications = [
     issuer: "TCS iON",
     date: "Mar 2025",
     detail: "",
-    image: "/certs/tcs.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171870/tcs_ln59k0.png",
   },
 
   {
@@ -116,7 +116,7 @@ const certifications = [
     issuer: "TCS iON",
     date: "Feb 2025",
     detail: "",
-    image: "/certs/tcs2.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171870/tcs2_vyygy4.png",
   },
 
   {
@@ -125,7 +125,7 @@ const certifications = [
     issuer: "Cisco Networking Academy",
     date: "Aug 2024",
     detail: "",
-    image: "/certs/cisco.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171867/cisco_xgndog.png",
   },
 
   {
@@ -134,7 +134,7 @@ const certifications = [
     issuer: "Cybrary",
     date: "Jun 2024",
     detail: "",
-    image: "/certs/pythoncyber.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171869/pythoncyber_xfp2gs.png",
   },
 
   {
@@ -143,7 +143,7 @@ const certifications = [
     issuer: "Great Learning",
     date: "Oct 2023",
     detail: "",
-    image: "/certs/ethical.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171867/ethical_rxbyuq.png",
   },
 
   {
@@ -152,7 +152,15 @@ const certifications = [
     issuer: "Great Learning",
     date: "Sep 2023",
     detail: "",
-    image: "/certs/pythonml.png",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171869/pythonml_cll6ta.png",
+  },
+  {
+    id: 18,
+    title: "Java Course - Mastering the Fundamentals",
+    issuer: "Scaler",
+    date: "April 2024",
+    detail: "",
+    image: "https://res.cloudinary.com/diff6zsad/image/upload/v1781171869/java_ven26r.png",
   },
 ];
 
@@ -221,6 +229,7 @@ function CertCard({ c, onHover }) {
 export default function Certifications() {
   const marqueeRef = React.useRef(null);
   const [isPaused, setIsPaused] = React.useState(false);
+  const [expandedMobileId, setExpandedMobileId] = React.useState(null);
   const DURATION = 35;
 
   const items = React.useMemo(() => {
@@ -278,7 +287,8 @@ export default function Certifications() {
     >
       <StarfieldCertifications />
 
-      <div className="relative py-16 md:py-20 z-10 text-center">
+      {/* DESKTOP VERSION - HIDDEN ON MOBILE */}
+      <div className="hidden md:block relative py-16 md:py-20 z-10 text-center">
         <h1 className="text-3xl sm:text-4xl font-bold text-indigo-300 mb-6 px-4">
           Welcome to my Certifications
         </h1>
@@ -312,6 +322,145 @@ export default function Certifications() {
           <p className="mt-6 text-xs sm:text-sm text-white/50 px-4">
             Hover a card to view full certificate.
           </p>
+        </div>
+      </div>
+
+      {/* MOBILE VERSION - HIDDEN ON DESKTOP */}
+      <div className="md:hidden relative py-12 z-10">
+        <div className="max-w-2xl mx-auto px-4">
+          <h1 className="text-3xl font-bold text-indigo-300 mb-3 text-center">
+            Certifications
+          </h1>
+
+          <h5 className="text-sm text-white/70 mb-8 text-center leading-relaxed">
+            Tap a certification to view the full certificate.
+          </h5>
+
+          <div className="flex flex-col gap-3">
+            {certifications.map((cert) => {
+              const isExpanded = expandedMobileId === cert.id;
+
+              return (
+                <div
+                  key={cert.id}
+                  className="
+                    bg-indigo-300/10
+                    backdrop-blur-md
+                    border border-teal-300/20
+                    rounded-lg
+                    overflow-hidden
+                    transition-all duration-200
+                  "
+                >
+                  {/* CARD HEADER - ALWAYS VISIBLE */}
+                  <button
+                    onClick={() =>
+                      setExpandedMobileId(
+                        isExpanded ? null : cert.id
+                      )
+                    }
+                    className="
+                      w-full
+                      text-left
+                      p-3.5
+                      flex
+                      items-center
+                      justify-between
+                      active:bg-indigo-300/5
+                      transition-colors
+                    "
+                  >
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-indigo-300 font-bold text-sm leading-snug">
+                        {cert.title}
+                      </h3>
+
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="text-xs text-white/70">
+                          {cert.issuer}
+                        </span>
+                        <span className="text-xs text-white/50">
+                          • {cert.date}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="flex-shrink-0 ml-2 text-indigo-300 text-xl font-light">
+                      {isExpanded ? "−" : "+"}
+                    </div>
+                  </button>
+
+                  {/* EXPANDABLE IMAGE AND DETAILS */}
+                  {isExpanded && (
+                    <div className="
+                      border-t border-teal-300/20
+                      bg-black/30
+                      px-3.5 py-4
+                      animate-in fade-in duration-200
+                    ">
+                      {cert.image && (
+                        <div className="mb-4 rounded-lg overflow-hidden bg-black border border-teal-300/10">
+                          <img
+                            src={cert.image}
+                            alt={cert.title}
+                            className="w-full h-auto max-h-72 object-contain"
+                          />
+                        </div>
+                      )}
+
+                      <div className="space-y-3">
+                        <div>
+                          <div className="text-xs text-white/50 font-semibold mb-1">
+                            CERTIFICATION ID
+                          </div>
+                          <div className="text-sm text-white/80 font-mono">
+                            {cert.id}
+                          </div>
+                        </div>
+
+                        <div>
+                          <div className="text-xs text-white/50 font-semibold mb-1">
+                            ISSUED BY
+                          </div>
+                          <div className="text-sm text-white/80">
+                            {cert.issuer}
+                          </div>
+                        </div>
+
+                        <div>
+                          <div className="text-xs text-white/50 font-semibold mb-1">
+                            DATE
+                          </div>
+                          <div className="text-sm text-white/80">
+                            {cert.date}
+                          </div>
+                        </div>
+                      </div>
+
+                      <button
+                        onClick={() => setExpandedMobileId(null)}
+                        className="
+                          w-full
+                          mt-4
+                          px-3
+                          py-2.5
+                          rounded-lg
+                          border border-teal-300/20
+                          text-indigo-300
+                          text-sm
+                          font-semibold
+                          active:bg-indigo-300/10
+                          transition
+                        "
+                      >
+                        Close
+                      </button>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
 

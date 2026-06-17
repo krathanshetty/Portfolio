@@ -57,7 +57,7 @@ export default function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
-      className="w-full min-h-screen overflow-x-hidden overflow-y-visible flex flex-col px-2 bg-gradient-to-b from-black via-[#0a0f1a] to-[#010314] text-white relative"
+      className="w-full overflow-x-hidden overflow-y-visible bg-gradient-to-b from-black via-[#0a0f1a] to-[#010314] text-white relative"
     >
       <StarBackground />
 
@@ -97,9 +97,115 @@ export default function Hero() {
         }}
       />
 
+      {/* MOBILE HERO */}
       <div
         className="
           flex
+          md:hidden
+          flex-col
+          min-h-[calc(100svh-4rem)]
+          w-full
+          px-5
+          sm:px-6
+          z-30
+          fade-in
+          pt-24
+        "
+      >
+        {/* Top Section - Greeting & Heading */}
+        <div className="flex flex-col items-center text-center z-40 pt-12 sm:pt-16">
+          <div className="text-sm sm:text-base text-indigo-300 font-Orbitron font-semibold tracking-wider mb-2">
+            Welcome
+          </div>
+          
+          <h1 className="text-4xl sm:text-5xl font-black font-Orbitron text-white leading-tight mb-1">
+            Hi There,
+          </h1>
+          
+          <h2 className="text-3xl sm:text-4xl font-bold font-Orbitron text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400 leading-tight">
+            I'm Krathan N Shetty
+          </h2>
+
+          <div className="mt-8 text-indigo-300 text-xs sm:text-sm font-Orbitron max-w-xs z-40 leading-relaxed tracking-wide">
+            <TypewriterText
+              text="> &nbsp; Operations Professional &nbsp; | &nbsp; Web Developer &nbsp; | &nbsp; Security Analyst "
+              speed={50}
+            />
+          </div>
+
+          <ScrollLink
+            to="about"
+            smooth={true}
+            duration={600}
+            className="z-50 mt-10 inline-block px-8 py-3 font-bold text-sm sm:text-base border-2 border-indigo-400 text-indigo-300 hover:bg-indigo-400 hover:text-black transition-all duration-300 rounded-lg shadow-lg cursor-pointer"
+          >
+            Explore My Work
+          </ScrollLink>
+        </div>
+
+        {/* Middle Section - Social Icons */}
+        <div className="flex justify-center gap-5 z-50 relative mt-10 flex-shrink-0">
+          <a
+            href="https://www.linkedin.com/in/shettykrathan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer hover:scale-125 transition-transform duration-300"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin className="text-indigo-300 hover:text-indigo-200 text-2xl" />
+          </a>
+
+          <a
+            href="https://github.com/krathanshetty"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer hover:scale-125 transition-transform duration-300"
+            aria-label="GitHub"
+          >
+            <FaGithub className="text-indigo-300 hover:text-indigo-200 text-2xl" />
+          </a>
+
+          <a
+            href="https://instagram.com/_shetty_krathan_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer hover:scale-125 transition-transform duration-300"
+            aria-label="Instagram"
+          >
+            <FaInstagram className="text-indigo-300 hover:text-indigo-200 text-2xl" />
+          </a>
+        </div>
+
+        {/* Flexible Spacer */}
+        <div className="flex-grow" />
+
+        {/* Bottom Section - Made With */}
+        <div className="flex flex-col items-center gap-4 z-50 pb-10 flex-shrink-0">
+          <div className="text-xs font-Orbitron text-indigo-300 font-semibold tracking-wider">
+            CRAFTED WITH
+          </div>
+
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="flex items-center justify-center p-2 sm:p-2.5 border border-indigo-400 rounded-lg bg-black/40 hover:bg-black/60 transition-colors duration-300">
+              <FaReact className="text-indigo-300 text-lg sm:text-xl" />
+            </div>
+
+            <div className="flex items-center justify-center p-2 sm:p-2.5 border border-indigo-400 rounded-lg bg-black/40 hover:bg-black/60 transition-colors duration-300">
+              <ViteLogo className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-300" />
+            </div>
+
+            <div className="flex items-center justify-center p-2 sm:p-2.5 border border-indigo-400 rounded-lg bg-black/40 hover:bg-black/60 transition-colors duration-300">
+              <SiTailwindcss className="text-indigo-300 text-lg sm:text-xl" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* DESKTOP HERO */}
+      <div
+        className="
+          hidden
+          md:flex
           flex-col
           md:flex-row
           items-center
@@ -126,7 +232,7 @@ export default function Hero() {
             md:ml-20
             lg:pr-20
             z-40
-            pt-24
+            justify-start
             md:pt-0
           "
         >
