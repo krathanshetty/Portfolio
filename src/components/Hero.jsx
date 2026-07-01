@@ -117,11 +117,11 @@ export default function Hero() {
           <div className="text-sm sm:text-base text-indigo-300 font-Orbitron font-semibold tracking-wider mb-2">
             Welcome
           </div>
-          
+
           <h1 className="text-4xl sm:text-5xl font-black font-Orbitron text-white leading-tight mb-1">
             Hi There,
           </h1>
-          
+
           <h2 className="text-3xl sm:text-4xl font-bold font-Orbitron text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400 leading-tight">
             I'm Krathan N Shetty
           </h2>

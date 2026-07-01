@@ -4,6 +4,14 @@ import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
+  id: "pdf-pro",
+  title: "PDF Pro",
+  date: "Jun 2026 — Present",
+  tech: ["React", "TypeScript", "Tailwind CSS", "PDF-Lib"],
+  desc: "Developed a privacy-focused, client-side PDF toolkit featuring image-to-PDF conversion, drag-and-drop page reordering, free-form image cropping and rotation, watermark management, PDF size optimization, and a fully responsive mobile-first interface.",
+  link: "https://pdfproweb.web.app/",
+},
+{
     id: "soc-dashboard",
     title: "Real-Time SOC Simulation Dashboard",
     date: "Mar 2026 — Apr 2026",
